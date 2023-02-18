@@ -1,0 +1,30 @@
+#N canvas 2 52 1362 692 12;
+#X text 9 8 INLET 0:;
+#X obj 12 36 cnv 15 134 40 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 207 36 cnv 15 135 40 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X text 204 8 OUTLET 0:;
+#X obj 217 46 sig~;
+#X obj 207 163 cnv 15 420 66 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X text 206 135 DEPENDENCIAS:;
+#X obj 22 46 sig~;
+#X obj 207 317 cnv 15 414 127 empty empty empty 20 12 0 14 -204786
+-66577 0;
+#X text 206 289 ACERCA DE:;
+#X obj 12 613 loadbang;
+#X msg 12 638 0;
+#X obj 12 663 switch~;
+#X text 62 46 señal mono;
+#X text 257 46 señal mono;
+#X text 214 172 -para que la abstracción funcione deben instalarse
+las abstracciones [evenodd~] y [signsplit~] del paquete pd-dmtools
+(https://github.com/teaecetyrannis/pd-dmtools);
+#X text 215 326 wavefolder "infinito" (siempre se mantiene dentro de
+los límites -1 a 1 sin importar cuanto se exceda la señal entrante)
+y "bipolar" (la parte positiva de la señal se pliega entre 0 y 1 y
+la parte negativa entre 0 y -1 de manera independiente) \; \; dylan
+martin;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;

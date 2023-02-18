@@ -1,0 +1,49 @@
+#N canvas 914 35 449 708 12;
+#X obj 550 126 cnv 15 499 111 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X msg 560 142 set foo;
+#X obj 12 126 cnv 15 477 114 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 12 39 cnv 15 134 39 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 22 49 sig~;
+#X text 9 11 INLET 0:;
+#X obj 157 39 cnv 15 134 39 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 167 49 sig~;
+#X text 154 11 INLET 1:;
+#X text 9 98 INLET 2:;
+#X obj 549 39 cnv 15 134 39 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X obj 559 49 sig~;
+#X obj 694 39 cnv 15 134 39 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X obj 704 49 sig~;
+#X text 546 11 OUTLET 0:;
+#X text 691 11 OUTLET 1:;
+#X text 547 98 OUTLET 2:;
+#X msg 22 173 mono \$1;
+#X msg 22 211 state;
+#X obj 22 136 float;
+#X text 62 49 canal izq.;
+#X text 599 49 canal izq.;
+#X text 207 49 canal der.;
+#X text 744 49 canal der.;
+#X text 621 135 donde foo representa una lista de todos los parámetros
+correctamente formateados para ser enviados de vuelta a la abstracción
+\, en otras palabras \, conectar esta salida a un mensaje y cuando
+la abstracción reciba el mensaje [state(] \, se guardará el estado
+actual de la abstracción (tener en cuenta que el mensaje se vaciará
+antes de escribir en él);
+#X text 69 211 escribir un mensaje con el estado actual de la abstracción
+;
+#X text 70 136 ganancia (dB);
+#X obj 12 629 loadbang;
+#X msg 12 654 0;
+#X obj 12 679 switch~;
+#X text 82 166 mezclar stereo a mono o no (distinto de cero y 0 respectivamente)
+;
+#X connect 17 0 18 0;
+#X connect 19 0 17 0;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;

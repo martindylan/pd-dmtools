@@ -1,0 +1,57 @@
+#N canvas 686 35 677 708 12;
+#X obj 550 126 cnv 15 499 111 empty empty empty 20 12 0 14 -204800
+-66577 0;
+#X msg 560 142 set foo;
+#X obj 12 126 cnv 15 477 187 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 12 39 cnv 15 134 39 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 22 49 sig~;
+#X text 9 11 INLET 0:;
+#X obj 157 39 cnv 15 134 39 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 167 49 sig~;
+#X text 154 11 INLET 1:;
+#X obj 549 39 cnv 15 134 39 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X obj 559 49 sig~;
+#X obj 694 39 cnv 15 134 39 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X obj 704 49 sig~;
+#X text 546 11 OUTLET 0:;
+#X text 691 11 OUTLET 1:;
+#X text 547 98 OUTLET 2:;
+#X msg 22 283 state;
+#X text 62 49 canal izq.;
+#X text 207 49 canal der.;
+#X text 599 49 canal izq.;
+#X text 744 49 canal der.;
+#X text 621 135 donde foo representa una lista de todos los parámetros
+correctamente formateados para ser enviados de vuelta a la abstracción
+\, en otras palabras \, conectar esta salida a un mensaje y cuando
+la abstracción reciba el mensaje [state(] \, se guardará el estado
+actual de la abstracción (tener en cuenta que el mensaje se vaciará
+antes de escribir en él);
+#X text 69 283 escribir un mensaje con el estado actual de la abstracción
+;
+#X obj 12 629 loadbang;
+#X msg 12 654 0;
+#X obj 12 679 switch~;
+#X text 9 98 INLET 2:;
+#X msg 22 136 room \$1;
+#X text 82 136 tamaño del cuarto (1 a 300);
+#X msg 22 165 time \$1;
+#X text 81 165 tiempo de reverberancia (100 a 30000);
+#X msg 22 194 damp \$1;
+#X text 82 194 dampening (0 a 1);
+#X msg 22 223 early \$1;
+#X msg 22 253 tail \$1;
+#X text 89 223 ganancia de las reflecciones tempranas (0 a 100%);
+#X text 83 253 ganancia de la cola (0 a 100%);
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 27 0 29 0;
+#X connect 29 0 31 0;
+#X connect 31 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 16 0;

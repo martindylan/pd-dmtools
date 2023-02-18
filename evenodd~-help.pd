@@ -1,0 +1,45 @@
+#N canvas 684 52 338 692 12;
+#X text 9 8 INLET 0:;
+#X obj 12 36 cnv 15 162 40 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 513 36 cnv 15 197 39 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X text 510 8 OUTLET 0:;
+#X obj 523 46 sig~;
+#X obj 721 36 cnv 15 210 39 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X obj 731 46 sig~;
+#X text 718 8 OUTLET 1:;
+#X obj 513 163 cnv 15 428 82 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X text 512 135 ACERCA DE:;
+#X obj 12 600 loadbang;
+#X msg 12 625 0;
+#X obj 12 650 switch~;
+#X obj 22 46 sig~;
+#X text 62 46 señal entrante;
+#X text 9 96 INLET 0:;
+#X obj 12 124 cnv 15 434 94 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X text 521 172 abstracción que recibe una señal de audio y \, luego
+de obtener su parte entera \, determina si ésta es par o impar \;
+\; dylan martin;
+#X obj 12 239 cnv 15 440 71 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 22 249 cnv 15 420 51 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X msg 22 134 floor;
+#X msg 22 161 round;
+#X msg 22 188 ceil;
+#X text 62 188 la parte entera es el entero superior más cercano;
+#X text 68 134 la parte entera es el el entero inferior más cercano
+;
+#X text 68 161 la parte entera es el entero más cercano;
+#X text 29 258 el método de aproximación también puede determinarse
+como argumento \, por ejemplo [evenodd~ round];
+#X text 563 46 es par o no (1 o 0);
+#X text 770 46 es impar o no (1 o 0);
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;

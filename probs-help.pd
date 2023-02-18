@@ -1,0 +1,22 @@
+#N canvas 686 35 677 708 12;
+#X obj 12 39 cnv 15 448 74 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 520 39 cnv 15 470 45 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X text 517 11 OUTLET 0:;
+#X text 9 11 INLET 0:;
+#X obj 22 78 bang;
+#X obj 22 49 float;
+#X obj 530 49 bang;
+#X text 61 71 genera un número random entre 0 y 100 y comprueba si
+se encuentra entre 0 y la probabilidad dada;
+#X obj 12 124 cnv 15 448 66 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 22 134 cnv 15 428 46 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 30 140 adicionalmente \, se puede dar el valor de probabilidad
+como argumento inicial del objeto \, por ejemplo [probs 75];
+#X text 569 42 si el nùmero random se encuentra entre 0 y la probabilidad
+dada \, un bang es devuelto;
+#X text 68 48 probabilidad (0 a 100%);
+#X connect 5 0 4 0;
