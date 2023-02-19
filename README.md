@@ -23,6 +23,7 @@ Incluye las siguientes abstracciones:
 - `[pw~]`: Generador de pulsos u oscilador con forma de onda rectangular.
 - `[signsplit~]`: Separa las partes negativa y positiva de una señal.
 - `[stom~]`: Herramienta para reducir la imagen estéreo.
+- `[tanh~]`: Devuelve una aproximación de la tangente hiperbólica de una señal.
 
 ## créditos
 - [Pure Data](https://github.com/pure-data/pure-data) por Miller Puckette y muchxs más.
