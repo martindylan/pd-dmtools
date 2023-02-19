@@ -1,0 +1,21 @@
+#N canvas 2 52 1362 692 12;
+#X text 9 8 INLET 0:;
+#X obj 12 36 cnv 15 162 40 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 235 36 cnv 15 205 39 empty empty empty 20 12 0 14 -204800 -66577
+0;
+#X text 232 8 OUTLET 0:;
+#X obj 245 46 sig~;
+#X obj 235 163 cnv 15 428 82 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#X text 234 135 ACERCA DE:;
+#X obj 12 600 loadbang;
+#X msg 12 625 0;
+#X obj 12 650 switch~;
+#X obj 22 46 sig~;
+#X text 62 46 señal entrante;
+#X text 243 172 abstracción que recibe una señal de audio y devuelve
+una aproximación de su tangente hiperbólica \; \; dylan martin;
+#X text 285 46 tangente hiperbólica;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
