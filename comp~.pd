@@ -1,4 +1,4 @@
-#N canvas 685 52 679 692 12;
+#N canvas 2 52 1362 692 12;
 #X obj 21 518 loadbang;
 #X obj 98 573 tabwrite~ \$0-orig;
 #X obj 98 543 sig~;
@@ -27,7 +27,7 @@
 #X msg 724 293 set \$1;
 #X msg 847 318 set \$1;
 #X obj 837 293 != 0;
-#N canvas 913 52 451 692 left 0;
+#N canvas 685 52 679 692 left 0;
 #X obj 169 579 *~;
 #X obj 169 734 outlet~;
 #X obj 187 136 moses, f 8;
@@ -79,7 +79,7 @@
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X restore 55 73 pd rms;
-#N canvas 1140 52 224 692 peak 0;
+#N canvas 1026 52 338 692 peak 0;
 #X obj 17 37 inlet~;
 #X obj 122 12 r \$0-mode;
 #X obj 122 42 switch~;
@@ -221,7 +221,7 @@
 #X obj 169 709 *~, f 5;
 #N canvas 1095 82 269 662 rms-peak 0;
 #X obj 106 43 inlet~;
-#N canvas 913 52 451 692 rms 0;
+#N canvas 1140 82 224 662 rms 0;
 #X obj 37 37 inlet~;
 #X obj 37 62 env~ 64;
 #X obj 201 85 r \$0-mode;
@@ -233,7 +233,7 @@
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
 #X restore 55 73 pd rms;
-#N canvas 1140 82 224 662 peak 0;
+#N canvas 1173 82 191 662 peak 0;
 #X obj 17 37 inlet~;
 #X obj 122 12 r \$0-mode;
 #X obj 122 42 switch~;
@@ -326,7 +326,7 @@
 #X connect 47 1 48 0;
 #X connect 48 0 43 1;
 #X restore 301 257 pd right;
-#N canvas 1026 52 338 692 state 0;
+#N canvas 685 52 679 692 state 0;
 #X obj 10 22 inlet;
 #X obj 10 47 t b b;
 #X msg 42 377 set;
@@ -340,28 +340,28 @@
 #X obj 104 227 r \$0-thresh;
 #X obj 123 127 r \$0-makeup;
 #X obj 142 152 r \$0-mode;
-#X obj 161 177 r \$0-bypass;
 #X obj 10 272 pack f f f f f f f f f;
 #X msg 10 302 add2 ratio \$1 \, addcomma \, add2 ahead \$2 \, addcomma
 \, add2 att \$3 \, addcomma \, add2 rel \$4 \, addcomma \, add2 sc
 \$5 \, addcomma \, add2 thresh \$6 \, addcomma \, add2 makeup \$7 \,
 addcomma \, add2 mode \$8 \, addcomma \, add2 \$9;
+#X obj 161 177 r \$0-switch;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
 #X connect 2 0 4 0;
-#X connect 3 0 14 0;
+#X connect 3 0 13 0;
 #X connect 5 0 3 1;
-#X connect 6 0 14 1;
-#X connect 7 0 14 2;
-#X connect 8 0 14 3;
-#X connect 9 0 14 4;
-#X connect 10 0 14 5;
-#X connect 11 0 14 6;
-#X connect 12 0 14 7;
-#X connect 13 0 14 8;
-#X connect 14 0 15 0;
-#X connect 15 0 4 0;
+#X connect 6 0 13 1;
+#X connect 7 0 13 2;
+#X connect 8 0 13 3;
+#X connect 9 0 13 4;
+#X connect 10 0 13 5;
+#X connect 11 0 13 6;
+#X connect 12 0 13 7;
+#X connect 13 0 14 0;
+#X connect 14 0 4 0;
+#X connect 15 0 13 8;
 #X restore 878 408 pd state;
 #X obj 683 238 s \$0-sc-r;
 #X obj 673 263 s \$0-sc;
@@ -435,17 +435,17 @@ need to convert the output to dB with rmstodb and also subtract by
 #X coords 0 1 4409 0 100 50 1 0 0;
 #X restore 42 208 graph;
 #X obj 42 210 vsl 100 50 0 1 0 0 \$0-thresh \$0-thresh-r empty 0 -9
-0 10 -262144 -191407 -1 9800 1;
+0 10 -262144 -191407 -1 1700 1;
 #X obj 42 194 cnv 12 50 12 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 42 140 nbx 3 15 0 999 0 0 \$0-ratio \$0-ratio-r ratio 0 -8 0
-10 -1 -262144 -1 1 256;
+10 -1 -262144 -1 4 256;
 #X obj 88 140 nbx 3 15 0 100 0 0 \$0-ahead \$0-ahead-r ahead 0 -8 0
-10 -1 -262144 -1 0 256;
+10 -1 -262144 -1 6 256;
 #X obj 42 172 nbx 3 15 0 100 0 0 \$0-att \$0-att-r att 0 -8 0 10 -1
--262144 -1 0 256;
+-262144 -1 5 256;
 #X obj 88 172 nbx 3 15 0 300 0 0 \$0-rel \$0-rel-r rel 0 -8 0 10 -1
--262144 -1 0 256;
+-262144 -1 30 256;
 #X obj 42 193 tgl 10 0 \$0-sc \$0-sc-r sidechain 15 4 0 10 -1 -262144
 -1 0 1;
 #X msg 130 29 1;
@@ -458,6 +458,8 @@ need to convert the output to dB with rmstodb and also subtract by
 #X obj 847 343 s \$0-switch-r;
 #X obj 837 368 s \$0-switch;
 #X obj 246 117 == 0;
+#X obj 132 285 tgl 10 0 \$0-switch \$0-switch-r empty 15 4 0 10 -1
+-262144 -1 1 1;
 #X connect 0 0 38 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
@@ -506,9 +508,9 @@ need to convert the output to dB with rmstodb and also subtract by
 #X connect 57 0 18 0;
 #X connect 57 0 16 0;
 #X connect 57 0 44 0;
-#X connect 57 0 84 0;
 #X connect 58 0 12 0;
 #X connect 58 0 50 0;
+#X connect 58 0 84 0;
 #X connect 59 0 11 0;
 #X connect 59 0 13 0;
 #X connect 59 1 14 0;
@@ -543,4 +545,4 @@ need to convert the output to dB with rmstodb and also subtract by
 #X connect 83 0 86 0;
 #X connect 83 0 62 0;
 #X connect 86 0 60 0;
-#X coords 0 -1 1 1 112 188 2 36 113;
+#X coords 0 -1 1 1 112 186 2 36 114;
