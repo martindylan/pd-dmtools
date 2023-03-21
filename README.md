@@ -4,7 +4,8 @@ Surtido de herramientas básicas de audio y de control, desarrolladas en [Pure D
 Incluye las siguientes abstracciones:
 - `[3band~]`: Ecualizador de tres bandas.
 - `[3bandsplit~]`: Divide la señal en tres bandas frecuenciales.
-- `[comp~]`: Interfaz simple para el plugin LADSPA sc3 (requiere [pd-plugin](https://github.com/teaecetyrannis/pd-plugin) y el paquete [swh-plugins](hhttps://github.com/swh/ladspa)).
+- `[comp~]`: Compresor con sidechain, lookahead y detección RMS/peak.
+- `[comp-ladspa~]`: Interfaz simple para el plugin LADSPA sc3 (requiere [pd-plugin](https://github.com/teaecetyrannis/pd-plugin) y el paquete [swh-plugins](hhttps://github.com/swh/ladspa)).
 - `[crushy~]`: Reductor de profundidad de bits y de frecuencia de muestro.
 - `[ctlmng]`: Interfaz que permite controlar y modificar controles midi recibidos mediante el objeto [ctlin].
 - `[dbgain~]`: Control de ganancia en dB.
