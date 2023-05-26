@@ -13,6 +13,7 @@ Incluye las siguientes abstracciones:
 - `[evenodd~]`: Detecta si la parte entera de una señal (obtenida mediante floor, round o ceil) es par o impar.
 - `[fv~]`: Interfaz simple para el plugin LADSPA freeverb3 (requiere [pd-plugin](https://github.com/teaecetyrannis/pd-plugin) y el paquetes [cmt](https://www.ladspa.org/cmt/overview.html)).
 - `[gv~]`: Interfaz simple para el plugin LADSPA gverb (requiere [pd-plugin](https://github.com/teaecetyrannis/pd-plugin) y el paquete [swh-plugins](hhttps://github.com/swh/ladspa)).
+- `[hrtimer]`: Contador legible por humanos (mm:ss:ms).
 - `[infinifold~]`: Wavefolder "infinito".
 - `[linease]`: Generador de rampas similar al objeto [line] pero que cuenta con las formas ease-in, ease-out y ease-in-out.
 - `[lrtoms~]`: Conversor de estéreo izquierda-derecha a mid-side.
