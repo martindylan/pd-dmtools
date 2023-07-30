@@ -1,0 +1,72 @@
+#N canvas 78 78 1366 685 12;
+#X obj 550 126 cnv 15 499 111 empty empty empty 20 12 0 14 #c4fcfc
+#404040 0;
+#X msg 560 142 set foo;
+#X obj 12 39 cnv 15 511 460 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X obj 549 39 cnv 15 134 39 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X obj 559 49 sig~;
+#X text 546 11 OUTLET 0:;
+#X text 547 98 OUTLET 2:;
+#X msg 22 470 state;
+#X text 599 49 canal mono;
+#X text 69 470 escribir un mensaje con el estado actual de la abstracción
+;
+#X text 621 135 donde foo representa una lista de todos los parámetros
+correctamente formateados para ser enviados de vuelta a la abstracción
+\, en otras palabras \, conectar esta salida a un mensaje y cuando
+la abstracción reciba el mensaje [state(] \, se guardará el estado
+actual de la abstracción (tener en cuenta que el mensaje se vaciará
+antes de escribir en él);
+#X obj 12 599 loadbang;
+#X msg 12 624 0;
+#X obj 12 649 switch~;
+#X text 9 11 INLET 0:;
+#X msg 22 49 bang;
+#X text 62 49 reproducir;
+#X msg 22 78 dec \$1;
+#X text 76 78 tiempo de decaimiento (ms);
+#X text 81 107 frecuencia central;
+#X text 117 136 tiempo de glissando (ms);
+#X text 131 162 punto de llegada del glissando \, representado como
+una multiplicación de la frecuencia central;
+#X msg 22 107 freq \$1;
+#X msg 22 136 gliss len \$1;
+#X msg 22 169 gliss ratio \$1;
+#X msg 22 209 mod \$1;
+#X msg 22 238 mod mult \$1;
+#X text 75 209 índice de modulación FM (0-250);
+#X text 111 238 armónico de modulación;
+#X text 111 267 frecuencia fija de modulación;
+#X msg 22 267 mod freq \$1;
+#X text 76 296 frecuencia fija de modulación;
+#X msg 22 296 sat \$1;
+#X msg 22 325 lop \$1;
+#X msg 22 354 click \$1;
+#X msg 22 383 sharp \$1;
+#X msg 22 412 reso \$1;
+#X text 89 354 cantidad de click en el ataque (0 a 1);
+#X text 76 325 frecuencia de corte de agudos para la onda (200 a 20000Hz)
+;
+#X text 89 383 frecuencia de corte de agudos para el click (1000 a
+15000Hz);
+#X text 82 412 resonancia del click (0 a 0.8);
+#X msg 22 441 reso \$1;
+#X text 82 441 altura de la resonancia (10 a 0.1);
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 15 0 17 0;
+#X connect 17 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 30 0;
+#X connect 30 0 32 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 41 0;
+#X connect 41 0 7 0;

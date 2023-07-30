@@ -1,0 +1,23 @@
+#N canvas 784 141 1366 685 12;
+#X obj 12 39 cnv 15 245 39 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X text 9 11 INLET 0:;
+#X obj 499 39 cnv 15 477 45 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X text 496 11 OUTLET 0:;
+#X obj 12 589 loadbang;
+#X msg 12 614 0;
+#X obj 12 639 switch~;
+#X obj 12 99 cnv 15 413 66 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X obj 22 109 cnv 15 393 46 empty empty empty 20 12 0 14 #fcfcfc #404040
+0;
+#X obj 22 49 float;
+#X text 68 49 número de tecla a filtrar;
+#X text 30 115 adicionalmente \, se puede dar el número de tecla como
+argumento inicial del objeto \, por ejemplo [keytog 49];
+#X obj 509 49 float;
+#X text 555 44 1 al momento de presionar la tecla filtrada \, y 0 al
+soltar la tecla;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;

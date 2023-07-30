@@ -52,8 +52,8 @@
 #X obj 572 577 lop~, f 5;
 #X obj 101 103 cnv 15 150 192 empty empty empty 20 12 0 14 #ffffff
 #404040 0;
-#X obj 184 228 hsl 60 10 200 20000 1 0 \$0-lop \$0-lop-r lop -2 -8
-0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 184 228 hsl 60 10 200 20000 1 0 \$0-lop \$0-lop-r low-pass -2
+-8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 106 120 nbx 3 15 1 999 0 0 \$0-dec \$0-dec-r dec 0 -8 0 10 #fcfcfc
 #000000 #000000 0 256;
 #X obj 106 187 nbx 3 15 1 999 0 0 \$0-gliss-len \$0-gliss-len-r gliss\\\ len
@@ -62,24 +62,24 @@
 10 #fcfcfc #000000 #000000 0 256;
 #X obj 106 221 nbx 3 15 -1e+37 1e+37 0 0 \$0-gliss-ratio \$0-gliss-ratio-r
 gliss\\\ ratio 0 -8 0 10 #fcfcfc #000000 #000000 0 256;
-#X obj 184 120 hsl 60 10 0 250 0 0 \$0-mod \$0-mod-r mod -2 -8 0 10
-#fcfcfc #000000 #000000 0 1;
-#X obj 184 202 hsl 60 10 1 4 1 0 \$0-sat \$0-sat-r sat -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
+#X obj 184 120 hsl 60 10 0 250 0 0 \$0-mod \$0-mod-r FM\ mod -2 -8
+0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 184 202 hsl 60 10 1 4 1 0 \$0-sat \$0-sat-r saturation -2 -8
+0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 181 146 nbx 3 15 0 1e+37 0 0 \$0-mod-mult \$0-mod-mult-r mod\\\ mult
 0 -8 0 10 #fcfcfc #000000 #000000 0 256;
 #X obj 109 254 hsl 60 10 0.01 1 1 0 \$0-click \$0-click-r click -2
 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 109 280 hsl 60 10 0 0.8 0 0 \$0-reso \$0-reso-r reso -2 -8 0
-10 #fcfcfc #000000 #000000 0 1;
+#X obj 109 280 hsl 60 10 0 0.8 0 0 \$0-reso \$0-reso-r resonance -2
+-8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 184 280 hsl 60 10 10 0.1 1 0 \$0-pitch \$0-pitch-r pitch -2
 -8 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 184 254 hsl 60 10 1000 15000 1 0 \$0-sharp \$0-sharp-r sharp
+#X obj 184 254 hsl 60 10 1000 15000 1 0 \$0-sharp \$0-sharp-r sharpness
 -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 372 606 +~, f 29;
 #X obj 845 120 inlet;
 #X obj 845 144 route bang;
-#N canvas 575 117 548 403 route-inlet 0;
+#N canvas -7 0 681 676 route-inlet 1;
 #X obj 19 13 inlet;
 #X msg 29 66 set \$1;
 #X obj 29 90 s \$0-dec-r;
