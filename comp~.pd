@@ -27,7 +27,7 @@
 #X msg 724 293 set \$1;
 #X msg 847 318 set \$1;
 #X obj 837 293 != 0;
-#N canvas 685 52 679 692 left 0;
+#N canvas 685 52 1366 685 left 0;
 #X obj 169 579 *~;
 #X obj 169 734 outlet~;
 #X obj 187 136 moses, f 8;
@@ -382,9 +382,10 @@ state;
 #X obj 410 227 line~;
 #X obj 301 287 *~;
 #X obj 208 287 *~;
-#X obj 37 117 cnv 15 110 180 empty empty empty 20 12 0 14 -262144 -66577
+#X obj 37 117 cnv 15 110 180 empty empty empty 20 12 0 14 #fcfcfc #404040
 0;
-#X obj 131 121 vu 10 80 empty empty -1 -8 0 12 -262144 -1 0 0;
+#X obj 131 121 vu 10 80 empty empty -1 -8 0 12 #fcfcfc #000000 0 0
+;
 #N canvas 685 52 679 692 vu 0;
 #X obj 59 129 env~ 1024;
 #X obj 161 111 abs~;
@@ -398,7 +399,7 @@ state;
 #X text 344 307 Check the help file of env~ and slop~ for more details.
 , f 31;
 #X obj 239 89 expr 1000 / $f1;
-#X floatatom 239 117 5 0 0 0 - - -;
+#X floatatom 239 117 5 0 0 0 - - - 0;
 #X obj 161 146 slop~ 0 0 0 0 1e+09;
 #X text 359 89 convert to hz;
 #X text 282 118 hz;
@@ -431,35 +432,35 @@ need to convert the output to dB with rmstodb and also subtract by
 #X obj 130 4 loadbang;
 #X obj 130 54 -~, f 10;
 #N canvas 0 50 450 250 (subpatch) 0;
-#X array \$0-orig 4410 float 0;
-#X coords 0 1 4409 0 100 50 1 0 0;
+#X array \$0-orig 4800 float 0;
+#X coords 0 1 4799 0 100 50 1 0 0;
 #X restore 42 208 graph;
 #X obj 42 210 vsl 100 50 0 1 0 0 \$0-thresh \$0-thresh-r empty 0 -9
-0 10 -262144 -191407 -1 1700 1;
-#X obj 42 194 cnv 12 50 12 empty empty empty 20 12 0 14 -262144 -66577
+0 10 #fcfcfc #b8b8b8 #000000 0 1;
+#X obj 42 194 cnv 12 50 12 empty empty empty 20 12 0 14 #fcfcfc #404040
 0;
 #X obj 42 140 nbx 3 15 0 999 0 0 \$0-ratio \$0-ratio-r ratio 0 -8 0
-10 -1 -262144 -1 4 256;
+10 #000000 #fcfcfc #000000 0 256;
 #X obj 88 140 nbx 3 15 0 100 0 0 \$0-ahead \$0-ahead-r ahead 0 -8 0
-10 -1 -262144 -1 6 256;
-#X obj 42 172 nbx 3 15 0 100 0 0 \$0-att \$0-att-r att 0 -8 0 10 -1
--262144 -1 5 256;
-#X obj 88 172 nbx 3 15 0 300 0 0 \$0-rel \$0-rel-r rel 0 -8 0 10 -1
--262144 -1 30 256;
-#X obj 42 193 tgl 10 0 \$0-sc \$0-sc-r sidechain 15 4 0 10 -1 -262144
--1 0 1;
+10 #000000 #fcfcfc #000000 0 256;
+#X obj 42 172 nbx 3 15 0 100 0 0 \$0-att \$0-att-r att 0 -8 0 10 #000000
+#fcfcfc #000000 0 256;
+#X obj 88 172 nbx 3 15 0 300 0 0 \$0-rel \$0-rel-r rel 0 -8 0 10 #000000
+#fcfcfc #000000 0 256;
+#X obj 42 193 tgl 10 0 \$0-sc \$0-sc-r sidechain 15 4 0 10 #000000
+#fcfcfc #000000 0 1;
 #X msg 130 29 1;
 #X obj 197 24 r~ \$0-left-gain;
 #X obj 42 280 nbx 3 15 -100 100 0 0 \$0-makeup \$0-makeup-r makeup
-0 -8 0 10 -1 -262144 -1 0 256;
+0 -8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 95 280 hradio 10 1 0 2 \$0-mode \$0-mode-r rms/peak 0 -8 0 10
--262144 -1 -1 0;
+#fcfcfc #000000 #000000 0;
 #X obj 246 92 r \$0-switch;
 #X obj 847 343 s \$0-switch-r;
 #X obj 837 368 s \$0-switch;
 #X obj 246 117 == 0;
-#X obj 132 285 tgl 10 0 \$0-switch \$0-switch-r empty 15 4 0 10 -1
--262144 -1 1 1;
+#X obj 132 285 tgl 10 0 \$0-switch \$0-switch-r empty 15 4 0 10 #000000
+#fcfcfc #000000 0 1;
 #X connect 0 0 38 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;

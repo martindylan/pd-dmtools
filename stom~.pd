@@ -1,8 +1,8 @@
-#N canvas 914 35 449 708 12;
-#X obj 101 104 cnv 15 82 32 empty \$0-text empty 20 12 0 14 -262144
--1 0;
+#N canvas 914 35 1366 685 12;
+#X obj 101 104 cnv 15 82 32 empty \$0-text empty 20 12 0 14 #fcfcfc
+#000000 0;
 #X obj 109 121 hsl 67 10 0 1 0 0 empty \$0-vis stereo->mono -2 -8 0
-10 -1 -262144 -1 6600 0;
+10 #000000 #fcfcfc #000000 0 0;
 #X obj 461 161 snapshot~;
 #X obj 471 136 metro 25;
 #X obj 461 186 s \$0-vis;
@@ -33,11 +33,10 @@
 #X connect 12 0 10 0;
 #X connect 13 0 9 0;
 #X connect 14 0 11 0;
-#X connect 15 0 2 0;
 #X connect 15 0 18 1;
 #X connect 15 0 11 1;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
 #X connect 18 0 12 1;
 #X connect 18 0 13 1;
-#X coords 0 -1 1 1 84 40 2 100 100;
+#X coords 0 685 1 684 84 40 0;
