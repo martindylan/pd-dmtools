@@ -21,8 +21,8 @@ Incluye las siguientes abstracciones:
 - `[mstolr~]`: Conversor de estéreo mid-side a izquierda-derecha.
 - `[pan~]`: Herramienta para panear una señal mono.
 - `[panstereo~]`: Herramienta para panear una señal estéreo.
-- `[probs]`: Generador de bangs en base a una probabilidad de 0-100%.
 - `[pw~]`: Generador de pulsos u oscilador con forma de onda rectangular.
+- `[scale]`: Escala un número de un rango inicial a un nuevo rango.
 - `[signsplit~]`: Separa las partes negativa y positiva de una señal.
 - `[stom~]`: Herramienta para reducir la imagen estéreo.
 - `[tanh~]`: Devuelve una aproximación de la tangente hiperbólica de una señal.
