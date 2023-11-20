@@ -23,6 +23,7 @@ Incluye las siguientes abstracciones:
 - `[panstereo~]`: Herramienta para panear una señal estéreo.
 - `[pw~]`: Generador de pulsos u oscilador con forma de onda rectangular.
 - `[scale]`: Escala un número de un rango inicial a un nuevo rango, con la posibilidad de agregar un valor exponencial para la escala.
+- `[seq1]`: Secuenciador con diversas escalas y operaciones.
 - `[signsplit~]`: Separa las partes negativa y positiva de una señal.
 - `[stom~]`: Herramienta para reducir la imagen estéreo.
 - `[tanh~]`: Devuelve una aproximación de la tangente hiperbólica de una señal.

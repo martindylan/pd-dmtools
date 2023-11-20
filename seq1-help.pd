@@ -1,0 +1,61 @@
+#N canvas 52 52 1366 685 12;
+#X obj 38 150 cnv 15 520 355 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X obj 38 71 cnv 15 436 39 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X text 35 47 INLET 0:;
+#X obj 621 71 cnv 15 477 49 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X obj 631 87 sig~;
+#X text 618 47 OUTLET 0:;
+#X msg 48 476 state;
+#X obj 48 81 float;
+#X msg 48 160 scale \$1;
+#X msg 48 189 transpose \$1;
+#X msg 48 223 offset \$1;
+#X msg 48 287 length \$1;
+#X msg 48 321 height \$1;
+#X msg 48 384 random;
+#X msg 48 418 set \$1 \$2;
+#X msg 48 447 load \$1;
+#X text 35 126 INLET 1:;
+#X obj 621 164 cnv 15 499 105 empty empty empty 20 12 0 14 #c4fcfc
+#404040 0;
+#X msg 631 180 set foo;
+#X text 618 140 OUTLET 1:;
+#X text 692 173 donde foo representa una lista de todos los parámetros
+correctamente formateados para ser enviados de vuelta a la abstracción
+\, en otras palabras \, conectar esta salida a un mensaje y cuando
+la abstracción reciba el mensaje [state(] \, se guardará el estado
+actual de la abstracción (tener en cuenta que el mensaje se vaciará
+antes de escribir en él);
+#X text 116 160 seleccionar escala (0-6);
+#X text 122 287 largo de la secuencia;
+#X text 95 81 índice de la secuencia del cual se obtendrá el valor
+;
+#X text 671 80 valor del índice mapeado de acuerdo a los valores de
+scale \, transpose \, offset y height;
+#X text 123 216 cantidad de pasos por los que se desplazará en la
+escala el valor recuperado de la secuencia \, si se está trabajando
+con notas musicales se puede pensar como transposición tonal mientras
+que [transpose \$1( se trata de transposición real;
+#X text 144 189 valor que se le agrega al valor recuperado;
+#X text 123 314 altura máxima de la secuencia (la tabla tiene un rango
+de 0 a 1 \, los valores recuperados se multiplican por este valor antes
+de aplicar el offset \, mapear a la escala seleccionada y finalmente
+aplicar el transpose);
+#X text 102 377 crea una nueva secuencia llenando la tabla con números
+aleatorios con una definición de tres espacios decimales;
+#X text 123 418 establecer un valor (\$1) para un índice dado (\$2)
+;
+#X text 109 447 ruta de la secuencia;
+#X text 95 476 escribir un mensaje con el estado actual de la abstracción
+;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 6 0;
