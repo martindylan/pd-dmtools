@@ -1,0 +1,16 @@
+#N canvas 78 78 1366 685 12;
+#X obj 38 71 cnv 15 454 79 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X text 35 47 INLET 0:;
+#X obj 621 71 cnv 15 477 49 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X obj 631 87 sig~;
+#X text 618 47 OUTLET 0:;
+#X obj 48 87 float;
+#X text 671 80 valor del índice mapeado de acuerdo a los valores de
+scale \, transpose \, offset y height;
+#X text 93 80 enciende/resume o pausa el conteo (distinto de cero y
+0 respectivamente);
+#X obj 48 121 bang;
+#X text 86 121 resetea el conteo;
+#X connect 5 0 8 0;
