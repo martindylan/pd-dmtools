@@ -30,6 +30,3 @@ Incluye las siguientes abstracciones:
 
 ## créditos
 - [Pure Data](https://github.com/pure-data/pure-data) por Miller Puckette y muchxs más.
-- [CMT](https://www.ladspa.org/cmt/overview.html) por Richard W.E. Furse y otrxs.
-- [SWH](https://github.com/swh/ladspa) por Steve Harris.
-- [plugin~](https://github.com/teaecetyrannis/pd-plugin) por Jarno Seppänen.
