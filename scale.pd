@@ -38,7 +38,6 @@
 #X obj 40 341 r \$0-c;
 #X obj 44 428 r \$0-c;
 #X obj 402 99 clip 1 1e+37;
-#X obj 499 163 print;
 #X connect 0 0 18 0;
 #X connect 1 0 17 0;
 #X connect 2 0 23 0;
@@ -74,4 +73,3 @@
 #X connect 36 0 34 0;
 #X connect 37 0 27 1;
 #X connect 38 0 30 0;
-#X connect 38 0 39 0;
