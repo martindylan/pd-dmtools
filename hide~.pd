@@ -53,33 +53,33 @@
 #X obj 101 103 cnv 15 150 192 empty empty empty 20 12 0 14 #ffffff
 #404040 0;
 #X obj 184 228 hsl 60 10 200 20000 1 0 \$0-lop \$0-lop-r low-pass -2
--8 0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 106 120 nbx 3 15 1 999 0 0 \$0-dec \$0-dec-r dec 0 -8 0 10 #fcfcfc
-#000000 #000000 0 256;
-#X obj 106 187 nbx 3 15 1 999 0 0 \$0-gliss-len \$0-gliss-len-r gliss\\\ len
-0 -8 0 10 #fcfcfc #000000 #000000 0 256;
+-8 0 10 #000000 #ffffff #000000 0 1;
+#X obj 106 120 nbx 3 15 1 999 0 0 \$0-dec \$0-dec-r dec 0 -8 0 10 #000000
+#ffffff #000000 0 256;
+#X obj 106 187 nbx 3 15 1 999 0 0 \$0-gliss-len \$0-gliss-len-r gliss\ len
+0 -8 0 10 #000000 #ffffff #000000 0 256;
 #X obj 106 154 nbx 5 14 1 15000 0 0 \$0-freq \$0-freq-r freq 0 -8 0
-10 #fcfcfc #000000 #000000 0 256;
+10 #000000 #ffffff #000000 0 256;
 #X obj 106 221 nbx 3 15 -1e+37 1e+37 0 0 \$0-gliss-ratio \$0-gliss-ratio-r
-gliss\\\ ratio 0 -8 0 10 #fcfcfc #000000 #000000 0 256;
+gliss\ ratio 0 -8 0 10 #000000 #ffffff #000000 0 256;
 #X obj 184 120 hsl 60 10 0 250 0 0 \$0-mod \$0-mod-r FM\ mod -2 -8
-0 10 #fcfcfc #000000 #000000 0 1;
+0 10 #000000 #ffffff #000000 0 1;
 #X obj 184 202 hsl 60 10 1 4 1 0 \$0-sat \$0-sat-r saturation -2 -8
-0 10 #fcfcfc #000000 #000000 0 1;
-#X obj 181 146 nbx 3 15 0 1e+37 0 0 \$0-mod-mult \$0-mod-mult-r mod\\\ mult
-0 -8 0 10 #fcfcfc #000000 #000000 0 256;
+0 10 #000000 #ffffff #000000 0 1;
+#X obj 181 146 nbx 3 15 0 1e+37 0 0 \$0-mod-mult \$0-mod-mult-r mod\ mult
+0 -8 0 10 #000000 #ffffff #000000 0 256;
 #X obj 109 254 hsl 60 10 0.01 1 1 0 \$0-click \$0-click-r click -2
--8 0 10 #fcfcfc #000000 #000000 0 1;
+-8 0 10 #000000 #ffffff #000000 0 1;
 #X obj 109 280 hsl 60 10 0 0.8 0 0 \$0-reso \$0-reso-r resonance -2
--8 0 10 #fcfcfc #000000 #000000 0 1;
+-8 0 10 #000000 #ffffff #000000 0 1;
 #X obj 184 280 hsl 60 10 10 0.1 1 0 \$0-pitch \$0-pitch-r pitch -2
--8 0 10 #fcfcfc #000000 #000000 0 1;
+-8 0 10 #000000 #ffffff #000000 0 1;
 #X obj 184 254 hsl 60 10 1000 15000 1 0 \$0-sharp \$0-sharp-r sharpness
--2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+-2 -8 0 10 #000000 #ffffff #000000 0 1;
 #X obj 372 606 +~, f 29;
 #X obj 845 120 inlet;
 #X obj 845 144 route bang;
-#N canvas -7 0 681 676 route-inlet 1;
+#N canvas -7 0 681 676 route-inlet 0;
 #X obj 19 13 inlet;
 #X msg 29 66 set \$1;
 #X obj 29 90 s \$0-dec-r;
@@ -234,8 +234,8 @@ mod freq \$7 \, addcomma \, add2 sat \$8 \, addcomma \, add2 lop \$9
 #X connect 28 0 29 0;
 #X connect 29 0 30 0;
 #X restore 912 168 pd route-inlet;
-#X obj 184 177 hsl 60 10 10 1000 1 0 \$0-mod-freq \$0-mod-freq-r mod\\\ freq
--2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 184 177 hsl 60 10 10 1000 1 0 \$0-mod-freq \$0-mod-freq-r mod\ freq
+-2 -8 0 10 #000000 #ffffff #000000 0 1;
 #X obj 527 185 r \$0-mod-freq;
 #X msg 545 209 0 1;
 #X msg 436 209 1 0;
