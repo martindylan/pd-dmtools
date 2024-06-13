@@ -118,6 +118,8 @@
 #X obj 580 60 route float hipass mono state;
 #X msg 730 336 add2 \$1 \, addcomma \, add2 hipass \$2 \, addcomma
 \, add2 mono \$3;
+#X obj 661 6 loadbang;
+#X msg 661 30 0;
 #X connect 0 0 1 0;
 #X connect 1 0 6 0;
 #X connect 2 0 3 0;
@@ -167,4 +169,8 @@
 #X connect 47 2 34 0;
 #X connect 47 3 42 0;
 #X connect 48 0 44 0;
+#X connect 49 0 50 0;
+#X connect 50 0 34 0;
+#X connect 50 0 36 0;
+#X connect 50 0 35 0;
 #X coords 0 -1 1 1 82 92 2 100 100;
