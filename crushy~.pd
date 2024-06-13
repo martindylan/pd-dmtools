@@ -1,4 +1,4 @@
-#N canvas 685 52 679 692 12;
+#N canvas 685 0 1366 685 12;
 #X obj 198 251 wrap~;
 #X obj 180 191 *~;
 #X obj 180 281 -~;
@@ -65,24 +65,27 @@
 #X msg 324 81 2;
 #X obj 324 106 pow, f 5;
 #X obj 465 81 inlet;
-#N canvas 914 35 449 708 route-inlet-messages 0;
+#N canvas 914 35 449 708 route-inlet-messages 1;
 #X obj 12 50 inlet;
-#N canvas 914 35 449 708 state 0;
+#N canvas 914 35 449 708 state 1;
 #X obj 66 30 inlet;
-#N canvas 1027 35 336 708 global 0;
+#N canvas 732 43 1366 685 global 0;
 #X obj 54 60 f;
 #X obj 54 7 inlet;
 #X obj 54 238 outlet;
-#X obj 54 152 pack f f, f 26;
 #X obj 72 36 r \$0-bits;
 #X obj 233 65 r \$0-downsample;
-#X msg 54 181 add2 bits \$1 \, addcomma \, add2 downsample \$2;
-#X connect 0 0 3 0;
+#X obj 273 98 r \$0-drywet;
+#X obj 54 152 pack f f f, f 26;
+#X msg 54 180 add2 bits \$1 \, addcomma \, add2 downsample \$2 \, addcomma
+\, add2 drywet \$3;
+#X connect 0 0 6 0;
 #X connect 1 0 0 0;
-#X connect 3 0 6 0;
-#X connect 4 0 0 1;
-#X connect 5 0 3 1;
-#X connect 6 0 2 0;
+#X connect 3 0 0 1;
+#X connect 4 0 6 1;
+#X connect 5 0 6 2;
+#X connect 6 0 7 0;
+#X connect 7 0 2 0;
 #X restore 66 175 pd global;
 #X obj 66 59 t b b;
 #X msg 98 88 set;
@@ -134,16 +137,16 @@
 #X restore 465 110 pd route-inlet-messages;
 #X obj 533 356 r \$0-state;
 #X obj 533 381 outlet;
-#X obj 51 104 cnv 15 69 102 empty empty empty 20 12 0 14 -262144 -66577
+#X obj 51 104 cnv 15 69 102 empty empty empty 20 12 0 14 #fcfcfc #404040
 0;
 #X obj 56 122 nbx 4 15 2 32 0 0 \$0-bits \$0-bits-r bits 0 -8 0 10
--1 -262144 -1 32 256;
+#000000 #fcfcfc #000000 0 256;
 #X obj 56 154 nbx 4 15 0 6 0 0 \$0-downsample \$0-downsample-r downsample
-0 -8 0 10 -1 -262144 -1 0 256;
+0 -8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 56 186 nbx 4 15 0 100 0 0 \$0-drywet \$0-drywet-r drywet 0 -8
-0 10 -1 -262144 -1 100 256;
-#X obj 106 189 cnv 13 13 15 empty \$0-text % 0 6 0 10 -262144 -1 0
-;
+0 10 #000000 #fcfcfc #000000 0 256;
+#X obj 106 189 cnv 13 13 15 empty \$0-text % 0 6 0 10 #fcfcfc #000000
+0;
 #X obj 500 179 r \$0-drywet;
 #X obj 180 386 *~;
 #X obj 500 204 / 100;
