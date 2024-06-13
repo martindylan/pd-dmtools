@@ -14,8 +14,8 @@ Incluye las siguientes abstracciones:
 - `[hide~]`: Sintetizador percusivo.
 - `[hrtimer]`: Contador legible por humanos (mm:ss:ms).
 - `[infinifold~]`: Wavefolder "infinito".
-- `[keytog]`: Devuelve 1 o 0 si la tecla indicada es presionada o no, respectivamente.
 - `[keyboard]`: Utiliza keytog para enviar notas midi utilizando el teclado.
+- `[keytog]`: Devuelve 1 o 0 si la tecla indicada es presionada o no, respectivamente.
 - `[linease]`: Generador de rampas similar al objeto [line] pero que cuenta con las formas ease-in, ease-out y ease-in-out.
 - `[lrtoms~]`: Conversor de estéreo izquierda-derecha a mid-side.
 - `[master~]`: Pensada para utilizar al final de la cadena, esta abstracción cuenta con: control de ganancia en dB, vúmetro, conversión de estéreo a mono, eliminación de DC offset y clipeo a -1 1.
@@ -28,6 +28,7 @@ Incluye las siguientes abstracciones:
 - `[signsplit~]`: Separa las partes negativa y positiva de una señal.
 - `[stom~]`: Herramienta para reducir la imagen estéreo.
 - `[tanh~]`: Devuelve una aproximación de la tangente hiperbólica de una señal.
+- `[widey~]`: Ampliador de imagen estéreo (mono compatible).
 
 ## créditos
 - [Pure Data](https://github.com/pure-data/pure-data) por Miller Puckette y muchxs más.
