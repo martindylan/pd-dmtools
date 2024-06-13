@@ -1,0 +1,37 @@
+#N canvas 558 196 1366 685 12;
+#X obj 12 39 cnv 15 203 39 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X text 9 11 INLET 0:;
+#X obj 554 39 cnv 15 329 45 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X text 551 11 OUTLET 0:;
+#X obj 12 589 loadbang;
+#X msg 12 614 0;
+#X obj 12 639 switch~;
+#X obj 12 99 cnv 15 455 66 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X obj 22 109 cnv 15 435 46 empty empty empty 20 12 0 14 #fcfcfc #404040
+0;
+#X obj 22 49 float;
+#X obj 226 39 cnv 15 169 39 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X obj 236 49 float;
+#X text 223 11 INLET 1:;
+#X text 68 49 nota midi más grave;
+#X text 282 49 velocidad midi;
+#X obj 554 152 cnv 15 428 525 empty empty empty 20 12 0 14 #c4fcc4
+#404040 0;
+#X text 553 124 ACERCA DE:;
+#X text 30 115 adicionalmente \, se pueden dar como argumentos iniciales
+del objeto \, por ejemplo [keyboard 48 127];
+#X msg 564 49 \$1 \$2;
+#X text 610 49 mensaje midi (\$1=nota \, \$2=velocidad);
+#X text 562 161 este objeto recibe eventos del teclado y devuelve mensajes
+de note on al presionar teclas y note off al soltarlas \; partiendo
+de la nota midi más grave \, y ascendiendo cromáticamente \, la distribución
+de las notas en el teclado es la siguiente \; z \; s \; x \; d \; c
+\; v \; g \; b \; h \; n \; j \; m \; \, /q \; l/2 \; ./w \; ñ/3 \;
+e/- \; r \; 5 \; t \; 6 \; y \; 7 \; u \; i \; 9 \; o \; 0 \; p \;
+\; dylan martin;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
