@@ -1,0 +1,52 @@
+#N canvas 540 109 1366 685 12;
+#X obj 565 126 cnv 15 499 111 empty empty empty 20 12 0 14 #c4fcfc
+#404040 0;
+#X msg 575 142 set foo;
+#X obj 12 126 cnv 15 512 153 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X obj 12 39 cnv 15 134 39 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X obj 22 49 sig~;
+#X text 9 11 INLET 0:;
+#X obj 157 39 cnv 15 134 39 empty empty empty 20 12 0 14 #c4c4fc #404040
+0;
+#X obj 167 49 sig~;
+#X text 154 11 INLET 1:;
+#X text 9 98 INLET 2:;
+#X obj 564 39 cnv 15 134 39 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X obj 574 49 sig~;
+#X obj 709 39 cnv 15 134 39 empty empty empty 20 12 0 14 #c4fcfc #404040
+0;
+#X obj 719 49 sig~;
+#X text 561 11 OUTLET 0:;
+#X text 706 11 OUTLET 1:;
+#X text 562 98 OUTLET 2:;
+#X msg 22 250 state;
+#X obj 22 136 float;
+#X text 62 49 canal izq.;
+#X text 614 49 canal izq.;
+#X text 207 49 canal der.;
+#X text 759 49 canal der.;
+#X text 636 135 donde foo representa una lista de todos los parámetros
+correctamente formateados para ser enviados de vuelta a la abstracción
+\, en otras palabras \, conectar esta salida a un mensaje y cuando
+la abstracción reciba el mensaje [state(] \, se guardará el estado
+actual de la abstracción (tener en cuenta que el mensaje se vaciará
+antes de escribir en él);
+#X text 69 250 escribir un mensaje con el estado actual de la abstracción
+;
+#X obj 12 609 loadbang;
+#X msg 12 634 0;
+#X obj 12 659 switch~;
+#X text 68 136 cantidad de drive (dB);
+#X msg 22 212 bypass \$1;
+#X text 97 205 ignora o no los efectos del objeto sobre la señal (distinto
+de cero y 0 respectivamente);
+#X msg 22 174 mode \$1;
+#X text 80 174 selecciona el modo de operación (0-3);
+#X connect 18 0 31 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 29 0 17 0;
+#X connect 31 0 29 0;

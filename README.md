@@ -28,6 +28,7 @@ Incluye las siguientes abstracciones:
 - `[signsplit~]`: Separa las partes negativa y positiva de una señal.
 - `[stom~]`: Herramienta para reducir la imagen estéreo.
 - `[tanh~]`: Devuelve una aproximación de la tangente hiperbólica de una señal.
+- `[warmthy~]`: Saturador con diversas funciones.
 - `[widey~]`: Ampliador de imagen estéreo (mono compatible).
 
 ## créditos
