@@ -1,4 +1,4 @@
-#N canvas 675 -8 1366 685 12;
+#N canvas 4 0 1366 685 12;
 #X obj 238 345 *~;
 #X obj 483 525 dbtorms;
 #X obj 483 501 + 100;
@@ -11,19 +11,13 @@
 #X obj 296 105 line~;
 #X obj 217 134 *~;
 #X obj 328 134 *~;
-#X obj 101 104 cnv 15 88 114 empty empty empty 20 12 0 14 #ffffff #404040
-0;
-#X obj 106 151 nbx 3 15 0 24 0 0 \$0-drive \$0-drive-r drive 0 -8 0
-10 #000000 #ffffff #202020 0 256;
-#X obj 146 156 cnv 13 10 6 empty \$0-text dB 1 2 0 10 #ffffff #000000
-0;
-#X obj 106 183 nbx 3 15 -100 1e+37 0 0 \$0-out \$0-out-r out 0 -8 0
-10 #000000 #ffffff #202020 0 256;
-#X obj 146 188 cnv 13 10 6 empty \$0-text dB 1 2 0 10 #ffffff #000000
-0;
-#X obj 106 203 tgl 10 0 \$0-byp \$0-byp-r bypass 15 5 0 10 #000000
-#fcfcfc #000000 0 1;
-#N canvas 436 54 886 685 gloubi 0;
+#X obj 101 104 cnv 15 88 114 empty empty empty 20 12 0 14 #ffffff #404040 0;
+#X obj 106 151 nbx 3 15 0 24 0 0 \$0-drive \$0-drive-r drive 0 -8 0 10 #000000 #ffffff #202020 0 256;
+#X obj 146 156 cnv 13 10 6 empty \$0-text dB 1 2 0 10 #ffffff #000000 0;
+#X obj 106 183 nbx 3 15 -100 1e+37 0 0 \$0-out \$0-out-r out 0 -8 0 10 #000000 #ffffff #202020 0 256;
+#X obj 146 188 cnv 13 10 6 empty \$0-text dB 1 2 0 10 #ffffff #000000 0;
+#X obj 106 203 tgl 10 0 \$0-byp \$0-byp-r bypass 15 5 0 10 #000000 #fcfcfc #000000 0 1;
+#N canvas 436 44 886 685 gloubi 0;
 #X obj 49 154 *~ 0.686306;
 #X obj 85 310 +~ 1;
 #X obj 85 214 abs~;
@@ -66,9 +60,9 @@
 #X obj 477 276 switch~;
 #X obj 398 237 t f f;
 #X msg 442 213 0;
-#X obj 477 213 delay 50;
 #X msg 477 237 0;
 #X obj 398 150 == 1;
+#X obj 477 213 delay 50;
 #X connect 0 0 2 0;
 #X connect 0 0 6 0;
 #X connect 0 0 8 0;
@@ -107,10 +101,10 @@
 #X connect 28 0 27 1;
 #X connect 29 0 28 1;
 #X connect 30 0 16 0;
-#X connect 32 0 44 0;
+#X connect 32 0 43 0;
 #X connect 33 0 38 0;
 #X connect 33 1 41 0;
-#X connect 33 1 42 0;
+#X connect 33 1 44 0;
 #X connect 34 0 36 1;
 #X connect 34 0 35 1;
 #X connect 35 0 15 0;
@@ -120,16 +114,16 @@
 #X connect 40 0 37 0;
 #X connect 40 1 39 0;
 #X connect 41 0 37 0;
-#X connect 42 0 43 0;
-#X connect 43 0 39 0;
-#X connect 44 0 33 0;
+#X connect 42 0 39 0;
+#X connect 43 0 33 0;
+#X connect 44 0 42 0;
 #X restore 238 404 pd gloubi;
 #X msg 256 272 \$1 50;
 #X obj 256 296 line~;
 #X obj 256 224 + 100;
 #X obj 256 248 dbtorms;
 #X obj 256 200 r \$0-drive;
-#N canvas 104 104 1366 685 tubby3 0;
+#N canvas 4 44 1366 685 tubby3 0;
 #X obj 37 151 *~ 3;
 #X obj 37 175 *~, f 9;
 #X obj 97 103 loadbang;
@@ -165,6 +159,8 @@
 #X obj 37 122 *~ 0.4;
 #X obj 237 122 *~ 0.4;
 #X obj 457 76 == 0;
+#X obj 616 98 loadbang;
+#X msg 616 122 1;
 #X connect 0 0 1 0;
 #X connect 1 0 9 0;
 #X connect 2 0 3 0;
@@ -203,8 +199,10 @@
 #X connect 32 0 0 0;
 #X connect 33 0 10 0;
 #X connect 34 0 21 0;
+#X connect 35 0 36 0;
+#X connect 36 0 21 0;
 #X restore 315 404 pd tubby3;
-#N canvas 991 257 1366 685 tubby4 0;
+#N canvas 4 44 1366 685 tubby4 0;
 #X obj 37 18 inlet~;
 #X obj 37 141 /~;
 #X obj 54 70 abs~;
@@ -294,8 +292,7 @@
 #X connect 38 0 27 0;
 #X restore 392 404 pd tubby4;
 #X obj 298 622 *~;
-#X obj 106 109 hradio 10 1 0 4 \$0-mode \$0-mode-r Gloubi-boulga 1
-17 0 10 #ffffff #000000 #000000 0;
+#X obj 106 109 hradio 10 1 0 4 \$0-mode \$0-mode-r Tubby-3 1 17 0 10 #ffffff #000000 #000000 0;
 #N canvas 0 0 1365 704 modes 0;
 #X obj 238 283 symbol;
 #X msg 238 312 label \$1;
@@ -404,7 +401,7 @@
 #X obj 461 622 r \$0-state;
 #X obj 461 651 outlet;
 #X obj 488 26 inlet;
-#N canvas 26 26 450 300 route-inlet-messages 1;
+#N canvas 26 26 450 300 route-inlet-messages 0;
 #X obj 37 37 inlet;
 #X obj 37 61 route mode float out bypass state;
 #X obj 173 109 != 0;
@@ -417,21 +414,20 @@
 #X obj 59 34 t b b, f 6;
 #X obj 77 63 r \$0-drive;
 #X obj 86 116 r \$0-mode;
-#X msg 59 235 add2 \$1 \, addcomma \, add2 mode \$2 \, addcomma \,
-add2 out \$3 \, addcomma \, add2 byp \$4;
 #X obj 59 317 s \$0-state;
 #X msg 98 288 set;
+#X msg 59 235 add2 \$1 \, addcomma \, add2 out \$3 \, addcomma \, add2 bypass \$4 \, addcomma \, add2 mode \$2;
 #X connect 0 0 5 0;
 #X connect 1 0 2 0;
-#X connect 2 0 8 0;
+#X connect 2 0 10 0;
 #X connect 3 0 2 2;
 #X connect 4 0 2 3;
 #X connect 5 0 1 0;
-#X connect 5 1 10 0;
+#X connect 5 1 9 0;
 #X connect 6 0 1 1;
 #X connect 7 0 2 1;
-#X connect 8 0 9 0;
-#X connect 10 0 9 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
 #X restore 219 192 pd state;
 #X obj 14 196 r \$0-error;
 #X msg 14 246 se recibió un mensaje desconocido;
@@ -459,7 +455,6 @@ add2 out \$3 \, addcomma \, add2 byp \$4;
 #X connect 10 0 11 0;
 #X connect 10 0 12 0;
 #X connect 10 0 13 0;
-#X connect 10 0 14 0;
 #X restore 488 50 pd route-inlet-messages;
 #X connect 0 0 18 0;
 #X connect 0 0 24 0;
